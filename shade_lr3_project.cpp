@@ -58,7 +58,7 @@ int main() {
             }
             case 3: {
                 if (!kentered || !dentered){
-                    cout << "Сначала введите k и d. " << endl; 
+                    cout << "Сначала введите K и D. " << endl; 
                 } else {
                     long long result = addDigitRight(k, d);
                     cout << "Результат добавления цифры " << d << " справа к числу " << k << ": " << result << endl;
@@ -66,7 +66,7 @@ int main() {
             }
             case 4: {
                 if (!kentered || !dentered){
-                    cout << "Сначала введите k и d. " << endl; 
+                    cout << "Сначала введите K и D. " << endl; 
                 } else {
                     long long result = addDigitLeft(k, d);
                     cout << "Результат добавления цифры" << d << " слева к числу " << k << ": " << result << endl;
