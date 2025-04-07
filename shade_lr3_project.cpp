@@ -23,16 +23,16 @@ int main() {
     int choice;
     do {
         cout << "\nМеню. " << endl; 
-        cout << "1. Ввести натуральное число K. " << endl; 
+        cout << "1. Ввести натуральное число k. " << endl; 
         cout << "2. Ввести цифру D (в диапазоне 1-9). " << endl; 
-        cout << "3. Добавить к числу К справа цифру D. " << endl; 
-        cout << "4. Добавить к числу К слева цифру D. " << endl; 
+        cout << "3. Добавить к числу k справа цифру d. " << endl; 
+        cout << "4. Добавить к числу k слева цифру d. " << endl; 
 
         cout << "Выберите цифру: ";
         cin >> choice;
         switch(choice){
             case 1: {
-                cout << "Введите натуральное число K: ";
+                cout << "Введите натуральное число k: ";
                 cin >> k;
                 if (k <= 0){
                     cout << "Ошибка: число должно быть натуральным. " << endl;
@@ -44,7 +44,7 @@ int main() {
                 } break;
             }
             case 2: {
-                cout << "Введите натуральное число D (в диапазоне 1-9): " << endl; 
+                cout << "Введите натуральное число d (в диапазоне 1-9): " << endl; 
                 cin >> d;
                 
                 if (d < 1 || d > 9) {
@@ -58,7 +58,7 @@ int main() {
             }
             case 3: {
                 if (!kentered || !dentered){
-                    cout << "Сначала введите K и D. " << endl; 
+                    cout << "Сначала введите k и d. " << endl; 
                 } else {
                     long long result = addDigitRight(k, d);
                     cout << "Результат добавления цифры " << d << " справа к числу " << k << ": " << result << endl;
@@ -66,7 +66,7 @@ int main() {
             }
             case 4: {
                 if (!kentered || !dentered){
-                    cout << "Сначала введите K и D. " << endl; 
+                    cout << "Сначала введите k и d. " << endl; 
                 } else {
                     long long result = addDigitLeft(k, d);
                     cout << "Результат добавления цифры" << d << " слева к числу " << k << ": " << result << endl;
