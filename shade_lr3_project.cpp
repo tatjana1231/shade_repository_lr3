@@ -28,7 +28,7 @@ int inputD() {
 
 // Функция для добавления цифры d справа к числу k
 long long addDigitRight(long long k, int d) {
-// in development
+   return k * 10 + d;
 }
 
 // Функция для добавления цифры d слева к числу k
@@ -70,8 +70,13 @@ int main() {
                break;
            }
            case 3: {
-            //in development
-           }
+            if (!kentered || !dentered) {
+                   cout << "Сначала введите K и D. " << endl;
+               } else {
+                   long long result = addDigitRight(k, d);
+                   cout << "Результат добавления цифры " << d << " справа к числу " << k << ": " << result << endl;
+               }
+               break;           }
            case 4: {
             //in development
            }
