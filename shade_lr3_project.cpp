@@ -4,7 +4,14 @@ using namespace std;
 
 // Функция для ввода натурального числа k
 long long inputK() {
-//in development
+   long long k;
+   cout << "Введите натуральное число K: ";
+   cin >> k;
+   if (k <= 0) {
+       cout << "Ошибка: число должно быть натуральным. " << endl;
+       return 0; // Возвращаем 0 в случае ошибки
+   }
+   return k;
 }
 
 // Функция для ввода цифры d (в диапазоне 1-9)
@@ -38,7 +45,13 @@ int main() {
        cin >> choice;
        switch(choice) {
            case 1: {
-            //in development 
+               k = inputK();
+               if (k != 0) {
+                   kentered = true;
+               } else {
+                   kentered = false;
+               }
+               break;
            }
            case 2: {
             //in development
