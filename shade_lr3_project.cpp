@@ -16,7 +16,14 @@ long long inputK() {
 
 // Функция для ввода цифры d (в диапазоне 1-9)
 int inputD() {
-//in development
+   int d;
+   cout << "Введите цифру D (в диапазоне 1-9): ";
+   cin >> d;
+   if (d < 1 || d > 9) {
+       cout << "Ошибка: число должно быть в диапазоне от 1 до 9. " << endl;
+       return 0; 
+   }
+   return d;
 }
 
 // Функция для добавления цифры d справа к числу k
@@ -54,7 +61,13 @@ int main() {
                break;
            }
            case 2: {
-            //in development
+               d = inputD();
+               if (d != 0) {
+                   dentered = true;
+               } else {
+                   dentered = false;
+               }
+               break;
            }
            case 3: {
             //in development
