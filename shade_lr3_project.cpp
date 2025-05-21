@@ -33,7 +33,15 @@ long long addDigitRight(long long k, int d) {
 
 // Функция для добавления цифры d слева к числу k
 long long addDigitLeft(long long k, int d) {
-// in development
+   string kstr = to_string(k);
+   string dstr = to_string(d);
+   string resstr = dstr + kstr;
+   try {
+       return stoll(resstr);
+   } catch (const std::out_of_range& oor) {
+       cout << "Ошибка: Результат слишком большой для long long. " << endl;
+       return 0;
+   }
 }
 
 int main() {
@@ -78,7 +86,13 @@ int main() {
                }
                break;           }
            case 4: {
-            //in development
+               if (!kentered || !dentered) {
+                   cout << "Сначала введите K и D. " << endl;
+               } else {
+                   long long result = addDigitLeft(k, d);
+                   cout << "Результат добавления цифры " << d << " слева к числу " << k << ": " << result << endl;
+               }
+               break;
            }
             case 0: {
                cout << "Выход из программы. " << endl;
